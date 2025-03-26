@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ZIZU Agency</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="logo">ZIZUHub</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h1>Unleash Your Brand's Potential</h1>
+        <p>We craft innovative solutions for modern businesses.</p>
+        <button onclick="scrollToSection('services')">Our Services</button>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+      <h2>Our Services</h2>
+      <div class="service-grid">
+        <div class="service-card">
+          <h3>Web Design</h3>
+          <p>Stunning, responsive designs tailored to your needs.</p>
+        </div>
+        <div class="service-card">
+          <h3>Branding</h3>
+          <p>Build a memorable identity with our expertise.</p>
+        </div>
+        <div class="service-card">
+          <h3>Marketing</h3>
+          <p>Drive growth with strategic campaigns.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+      <h2>Our Work</h2>
+      <div class="portfolio-grid">
+        <div
+          class="portfolio-item"
+          onclick="openModal('E-commerce Redesign', 'A sleek online store for fashion.')"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+            alt="E-commerce"
+          />
+          <p>E-commerce Redesign</p>
+        </div>
+        <div
+          class="portfolio-item"
+          onclick="openModal('Brand Identity', 'A bold logo and collateral for a startup.')"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+            alt="Branding"
+          />
+          <p>Brand Identity</p>
+        </div>
+        <div
+          class="portfolio-item"
+          onclick="openModal('Portfolio Site', 'A modern showcase for a photographer.')"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+            alt="Portfolio"
+          />
+          <p>Portfolio Site</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+      <h2>What Clients Say</h2>
+      <div class="testimonial-slider">
+        <div class="testimonial active">
+          <p>"ZIZUHub transformed our online presence!"</p>
+          <span>- John Doe, CEO</span>
+        </div>
+        <div class="testimonial">
+          <p>"Their designs are top-notch and professional."</p>
+          <span>- Jane Smith, Founder</span>
+        </div>
+      </div>
+      <button class="slider-btn" onclick="nextTestimonial()">Next</button>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <h2>Get in Touch</h2>
+      <form id="contact-form" onsubmit="handleFormSubmit(event)">
+        <input type="text" id="name" placeholder="Your Name" required />
+        <input type="email" id="email" placeholder="Your Email" required />
+        <textarea id="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">×</span>
+        <h3 id="modal-title"></h3>
+        <p id="modal-desc"></p>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p>© 2025 ZizuHub. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
